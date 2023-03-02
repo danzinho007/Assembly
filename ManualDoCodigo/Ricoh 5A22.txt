@@ -1,0 +1,20 @@
+Link :
+https://pt.wikipedia.org/wiki/Ricoh_5A22
+
+O Ricoh 5A22 é um microprocessador produzido pela Ricoh para o console de jogos eletrônicos Super Nintendo Entertainment System (SNES). O 5A22 é baseado em torno do CMD/GTE 65c816 16-bit, por si só uma versão do WDC 65C816 (usado no computador pessoal Apple IIGS).
+
+Todos os processadores mencionados acima são baseados na família de processadores MOS Technology 6502.
+
+Características :
+
+Além do núcleo da CPU 65C816, o 5A22 contém suporte de hardware, incluindo:
+
+Porta de interface para os circuitos do controlador, incluindo ambos acessos serial e paralelo aos dados do controlador
+Uma porta I/O paralela de 8-bit, que quase não é usada no SNES
+Circuitos para geração de Interrupção NMI ou V-Blank.
+Circuitos para geração de Interrupção IRQ ao calcular as posições da tela
+Uma unidade DMA, suportando dois modos primários:
+DMA geral, para uma transferência de blocos à uma taxa de 2.68MB/s
+DMA H-blank, para transferência de pequenos conjuntos de dados no final de cada linha de scan fora do período ativo de exibição.
+Multiplicação e divisão de registros
+Dois barramentos de endereços navegando o barramento de 8-bit; um "Barramento A" de 24-bit para acesso geral, e um "Barramento B" de 8-bit sobretudo para registros de APU e PPU

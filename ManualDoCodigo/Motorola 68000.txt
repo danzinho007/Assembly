@@ -1,0 +1,8 @@
+Link :
+https://pt.wikipedia.org/wiki/Motorola_68000
+https://en.wikipedia.org/wiki/Motorola_68000
+
+O Motorola 68000 (às vezes abreviado para Motorola 68k ou m68k e geralmente pronunciado "sessenta e oito mil") é um microprocessador de computador com conjunto de instruções complexas (CISC) de 16/32 bits , introduzido em 1979 pela Motorola Semiconductor Setor de Produtos.
+
+O projeto implementa um conjunto de instruções de 32 bits , com registradores de 32 bits e um barramento de dados interno de 16 bits . O barramento de endereços é de 24 bits e não usa segmentação de memória , o que facilitou a programação. Internamente, ele usa uma unidade lógica aritmética de dados (ALU) de 16 bits e mais duas ALUs de 16 bits usadas principalmente para endereços, e possui um barramento de dados externo de 16 bits . Por esta razão, a Motorola o chamou de processador de 16/32 bits.
+

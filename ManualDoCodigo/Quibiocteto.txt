@@ -1,0 +1,7 @@
+LinK :
+https://pt.wikipedia.org/wiki/Quibiocteto
+
+O quibiocteto, ou quibibyte (símbolo KiB, contração de kilo binary octet, ou KiB) é uma medida de armazenamento eletrônico de informação, estabelecida em 2000 pela Comissão Eletrotécnica Internacional (IEC) como:
+
+'1 kibiocteto = 1 024 octetos
+Visa substituir o "quilobyte" em ciências da computação, que se refere a 1024 octetos, e que entra em conflito com a definição do prefixo "quilo" do Sistema Internacional.

@@ -1,0 +1,26 @@
+Link
+https://www.youtube.com/watch?v=WoOVbPnpyjk&list=PLLFRf_pkM7b6Vi0ehPPovl1gQ5ubHTy5P
+Vídeo 01 = OK 
+
+Base : Super Nintendo e Mega Drive
+
+SNES - Mega Drive :
+
+Época de 16 bits
+Modo 8 / 16 - Modo 16 / 32 bits
+Clock : 3.58 - 7.67 Mhz
+RAM : 128 - 64 ( 2 de 32 ) Kib
+Barramento : 24 - 24 bits
+Dados : 8 - 16 bits
+Cartucho : 11 - 4 MB
+Lire End - Big End
+Video : 64 - 64 Kib
+Audio : Som - Som Techno 
+DMA : DMA / HBiDMA - DMA
+
+SNES :
+CPU Baseada = Western 65C816 ( Ver WDC 65C8116 )
+CPU Final = Ricoh 5A22 ( Ver Ricoh 5A22 )
+
+Mega :
+CPU = Motorola 68000

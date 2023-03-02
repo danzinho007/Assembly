@@ -1,0 +1,7 @@
+Link :
+https://en.wikipedia.org/wiki/WDC_65C02
+
+O microprocessador Western Design Center (WDC) 65C02 é uma versão CMOS aprimorada da popular tecnologia MOS 6502 de 8 bits baseada em nMOS . 
+
+O 65C02 corrigiu vários problemas no 6502 original e adicionou algumas novas instruções, mas sua principal característica foi o consumo de energia bastante reduzido, da ordem de 10 a 20 vezes menor do que o 6502 original rodando na mesma velocidade. 
+O consumo de energia reduzido tornou o 65C02 útil em funções de computador portátil e sistemas de microcontroladores em ambientes industriais. Tem sido usado em alguns computadores domésticos , bem como em sistemas embarcados aplicações, incluindo dispositivos implantados de nível médico.

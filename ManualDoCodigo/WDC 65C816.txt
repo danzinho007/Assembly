@@ -1,0 +1,4 @@
+Link :
+https://en.wikipedia.org/wiki/WDC_65C816
+
+O W65C816S (também 65C816 ou 65816 ) é um microprocessador de 8/16 bits (MPU) desenvolvido e vendido pelo Western Design Center (WDC). Introduzido em 1985, o W65C816S é uma versão aprimorada do MPU WDC 65C02 de 8 bits , ele próprio um aprimoramento CMOS do venerável MOS Technology 6502 NMOS MPU. O 65C816 foi a CPU do Apple IIGS e, de forma modificada, do Super Nintendo Entertainment System .

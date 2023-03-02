@@ -1,0 +1,4 @@
+Link :
+https://en.wikipedia.org/wiki/Microprocessor
+
+Um microprocessador é um processador de computador no qual a lógica e o controle de processamento de dados estão incluídos em um único circuito integrado (IC) ou em um pequeno número de ICs. O microprocessador contém os circuitos aritméticos, lógicos e de controle necessários para executar as funções da unidade central de processamento (CPU) de um computador. O IC é capaz de interpretar e executar instruções de programa e realizar operações aritméticas. [1] O microprocessador é um circuito integrado digital multiuso, acionado por clock e baseado em registro que aceita dados binários como entrada, processa-os de acordo cominstruções armazenadas em sua memória e fornece resultados (também em formato binário) como saída. Os microprocessadores contêm lógica combinacional e lógica digital sequencial e operam em números e símbolos representados no sistema numérico binário .
