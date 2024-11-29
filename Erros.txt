@@ -1,0 +1,69 @@
+Erros :
+-11 = Violação de segmento (Segmentation fault). Pode ocorrer por vários motivos : acessar área de memória inválida ou usar registrador incorretamente
+1 = Sintaxe ou lógica do código
+
+-comma, colon, decorator or end of line expected after operand
+Ocorre quando o assembler encontra um problema na sintaxe de uma instrução, como a falta de uma vírgula entre os operadores ou quando um operando é mal formatado
+
+-inconsistenly redefine
+Problema na definição de rótulo (label), acontece quando tenta definir o mesmo rótulo 2x ou de maneira inconsistente em locais diferentes do código
+
+-label alone on a line without a colon might be in error [-w+label-orphan]
+Cmpilador encontrou algo que parece ser um rótulo (label) em uma linha sozinho, mas sem o caracter : . Ele considera isso possivelmente um erro, porque no NASM rótulos devem terminar com um : .
+
+Exemplo :
+section .data
+    meu_dado
+    db 10
+
+Correção :
+section .data
+    meu_dado:
+    db 10
+
+Exemplo :
+section.bss ; Armazenar variáveis não inicializadas
+    num1 resq 1
+    num2 resq 1
+    resultado resq 1
+
+Correção :
+section .bss ; Armazenar variáveis não inicializadas
+    num1 resq 1
+    num2 resq 1
+    resultado resq 1
+
+-partser instruction expected 
+Ocorre quando o assemblmer espera uma instrução ( mov, add, jmp, etc ), mas não encontro algo que não pode ser interpretado como uma instrução válida
+
+-symbol `rd1' not defined
+
+Exemplo de erro:
+
+mov rax, 1
+mov rdi, 1
+mov rd1, 1
+
+Correção:
+
+mov rax, 1
+mov rdi, 1
+mov rdi, 1
+
+ou
+
+mov rax, 1
+mov rdi, 1
+mov rdx, 1
+
+Registros x64 válidos:
+
+- rax
+- rbx
+- rcx
+- rdx
+- rdi
+- rsi
+- rbp
+- rsp
+- r8-r15

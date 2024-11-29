@@ -1,0 +1,66 @@
+Significados :
+
+-add = instrução usada para somar 2 valores
+
+-dst = destino, registrador ou a posição de memória onde o valor será armazenado
+
+-eax = registrador de 32 bits na arquitetura x86 que na qual pode armazenar valores inteiros ou endereços
+
+-ebx = registrador de saída
+
+-int 0x80 = Interrupção para execução
+
+-jsl = Salta para a sub-rotina no endereço especificado 
+
+-lda = Carrega o valor do endereço espeficado mais o valor que está no registrador especificado
+
+-ldx = Carrega o valor espeficado no registrador especificado
+
+-lea = É uma instrução do x64 que não lê o valor armazenado na memória apontada por msg1, mas sim o endereço de memória onde msg1 está localizado.
+
+-mensagem é uma variável que pode ser uma string ou qualquer outro dado armazenado na memória. No caso de uma string, o que é realmente movido para o registrador rsi é o endereço de memória onde a string está armazenada, e não o conteúdo da string em si.
+
+-mov = copia um valor para um registrador ou uma posição de memória
+Sintaxe : mov destino, valor
+
+-mul = Multiplicação sem sinal
+
+-phk = Coloca o registrador de pilha na pilha. Garantir que a pilha continua igual se a rotina mudar
+
+-php = Coloca o status do processador na pilha
+
+Caso seja seguido de php 
+Coloca o status do processador na pilha novamente ( cópia de segurança )
+
+-phx = Coloca o valor do registrador especificado na pilha 
+
+-plb = Puxa o conteúdo da página base de memória para o registrador de página
+
+-rax = é um dos registradores da arquitetura x86-64, que armazena valores temporários ou resultados de cálculos.
+
+-rbx = registrador
+
+-rcx = registrador
+
+-rsi é um registrador de 64 bits da arquitetura x86-64.
+
+-rtl = Retorna a sub-rotina de chamada e restaura o estado anterior dos registradores
+
+-rts = Retorna da sub-rotina
+O fluxo volta para o endereço onde a sub-rotina foi chamada
+
+-section .bss
+Declaradas variáveis que não precisam de valores iniciais.
+O conteúdo dessas variáveis será inicializado como zero automaticamente
+
+-section .data
+Guardar dados
+
+-section.text
+Código executável
+
+-_start
+Chama a syscall para escrever a mensagem
+
+-sub = instrução usada para realizar uma subtração entre 2 valores
+
