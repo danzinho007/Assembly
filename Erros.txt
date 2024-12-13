@@ -11,6 +11,7 @@ Problema na definição de rótulo (label), acontece quando tenta definir o mesm
 -label alone on a line without a colon might be in error [-w+label-orphan]
 Cmpilador encontrou algo que parece ser um rótulo (label) em uma linha sozinho, mas sem o caracter : . Ele considera isso possivelmente um erro, porque no NASM rótulos devem terminar com um : .
 
+
 Exemplo :
 section .data
     meu_dado
@@ -32,6 +33,9 @@ section .bss ; Armazenar variáveis não inicializadas
     num1 resq 1
     num2 resq 1
     resultado resq 1
+
+-label nome' inconsistently redefined"
+Indica que o rótulo `nome foi definido mais de uma vez em seu código. Isso pode acontecer se você tiver duas definições do mesmo rótulo em seções diferentes ou se não tiver gerenciado os rótulos corretamente.
 
 -partser instruction expected 
 Ocorre quando o assemblmer espera uma instrução ( mov, add, jmp, etc ), mas não encontro algo que não pode ser interpretado como uma instrução válida

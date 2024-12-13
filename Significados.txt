@@ -1,3 +1,26 @@
+Resumo :
+
+Estruturas condicionais : if, else
+
+---Operações matemáticas simples : soma, subtração, multiplicação e divisão
+add: Soma.
+sub: Subtração.
+mul: Multiplicação (usando o registrador rax como base).
+div: Divisão (resultado em rax, resto em rdx).
+
+Registradores : rax, rbx, rcx, rdx, etc
+
+Instruções : add, mov, jmp, sub, etc
+
+Instrução diretiva = len equ
+
+---Instrução salto = jmp, jne, jpe, etc
+jmp: Salto incondicional.
+je: Salta se os valores comparados forem iguais (igual a if (x == y)).
+jne: Salta se os valores comparados forem diferentes.
+jg / jl: Salta se maior ou menor (if (x > y) ou if (x < y)).
+jge / jle: Maior ou igual, menor ou igual.
+
 Significados :
 
 -add = instrução usada para somar 2 valores
@@ -61,6 +84,15 @@ Código executável
 
 -_start
 Chama a syscall para escrever a mensagem
+
+-stderr
+stderr é a abreviação de "standard error", que em português significa "erro padrão". Esse é o canal que um programa usa pra enviar mensagens de erro e avisos. Quando você usa mov rdi, 2, tá dizendo pro programa que ele deve enviar as mensagens de erro pra esse canal, que geralmente também aparece no terminal. Isso é útil pra distinguir entre saídas normais e erros, facilitando a depuração de programas!
+
+-stdin
+stdin é a abreviação de "standard input", que em português significa "entrada padrão". É o canal que um programa usa pra ler dados que o usuário fornece, geralmente pelo teclado. Então, quando você usa mov rdi, 0, tá dizendo pro programa que ele deve ler a entrada do usuário a partir desse canal.
+
+-stdout 
+stdout é a abreviação de "standard output", que em português significa "saída padrão". É o canal pelo qual um programa envia suas mensagens ou resultados para você, geralmente a tela do terminal ou console. Quando um programa escreve algo em stdout, você consegue ver essa informação na tela.
 
 -sub = instrução usada para realizar uma subtração entre 2 valores
 

@@ -124,14 +124,14 @@ Se nada foi lido, encerra a leitura
 
 jmp ler
 Continua lendo 
-mov rax, 1          
-Número da chamada de sistema para escrever (stdout)
 
-mov rax, 0
-Usa o modo de leitura ( read ) do Syscall
+mov rdi, 1
+Identificador do dispositivo de saída padrão ( stdout )
 
-mov rax, 60
-Número da chamada de sistema para sair
+mov rax, 0 / 1 / 60 ( pode ser 0, 1 ou 60 )
+0- Usa o modo de leitura ( read ) do Syscall
+1- Número da chamada de sistema para escrever (stdout)
+60- Número da chamada de sistema para sair
 
 mov rdi, 0
 Move a entrada do teclado para o registrador rdi
@@ -139,15 +139,25 @@ Move a entrada do teclado para o registrador rdi
 1: stdout (saída padrão) — Geralmente, o terminal (exibe a saída do programa).
 2: stderr (saída de erro) — Também o terminal, usado para mensagens de erro.
 
-mov rdi, 1
-Identificador do dispositivo de saída (stdout)
+mov rdi, 0 / 1 / 2 ( pode ser 0, 1 ou 2 )
+0- Identificador do dispositivo de entrada padrão (stdin)
+O programa lê a entrada do usuário
+1- Identificador do dispositivo de saída padrão (stdout)
+O programa recebe a nossa entrada
+2- Identificador do dispositivo de erro padrão (stderr)
+Mostrar erros no terminal
 
+mov rdi, 
 mov rdx, 12
 Tamanho da mensagem
 
+mov rdx, rax
+Movendo o valor armazenado no registrador rax pra rdx. No contexto do seu código, isso é usado pra definir o tamanho em bytes da parte do nome que será escrita na saída.
+Após a leitura do nome, rax vai conter o número de bytes lidos, pois é assim que a syscall de read funciona. Ao mover esse valor pra rdx, você tá basicamente preparando o número de bytes que a próxima chamada de write precisa usar pra imprimir o nome do usuário na tela.
+
 mov rsi, mensagem
 Move a mensagem para o registrador rsi
-
+rsi é usado para passar o buffer onde o nome do usuário será armazenado. Assim, quando o syscall de leitura (read) for chamado, ele vai saber onde colocar os dados que o usuário digitar. 
 
 num resb 10
 Reserva 10 bytes de memória na seção .bss com o rótulo num. 
@@ -156,9 +166,22 @@ Se estiver na section .bss : Os valores desses bytes serão inicialmente 0 até 
 syscall
 Chama a rotina de serviço do sistema operacional
 
-xor rdi, rdi
+variável db 'Frase qualquer ', 0
+Guarda na variável o conteúdo da frase
 
+variável db 100 dup(0)
+A instrução nome db 100 dup(0) tá reservando espaço na seção de dados do seu programa. Vamos dividir isso:
+- nome é o nome da variável que você tá criando.
+- db significa "define byte", ou seja, tá definindo um espaço em bytes.
+- 100 é a quantidade de bytes que você tá reservando.
+- dup(0) significa que você quer inicializar esses 100 bytes com o valor 0, então isso cria um buffer vazio que pode ser usado pra armazenar o nome do usuário.
+Basicamente, essa linha tá preparando um espaço na memória pra guardar até 100 caracteres, inicialmente tudo zerado.
+
+xor rdi, rdi
+Zerar o registrador rdi. Na verdade, ele faz um "XOR" bit a bit entre rdi e ele mesmo, e o resultado sempre será zero. Então, ao executar esse comando, você garante que rdi fica com o valor 0. Isso é útil para definir um valor de saída, como no seu caso onde 0 significa sucesso ao encerrar o programa. 
+
+O código que você mostrou pedindo o nome do usuário e respondendo com "Olá, [nome]" tá bem estruturado. Se precisar de mais alguma coisa sobre isso, só avisar!
    
     
-   
+O que rolou foi que o nome "Daniel" foi lido corretamente e o código terminou a execução sem erros. Mas, parece que ele exibiu apenas "Olá, D" porque o buffer não foi configurado pra pegar o nome completo até o final. O código lê até 100 bytes, mas o rax não foi ajustado pra o número de caracteres lidos antes de passar pra write. Pra resolver isso, vc precisa armazenar a quantidade de bytes lidos. Assim, quando fizer write, vai saber exatamente o que mostrar. 
 
