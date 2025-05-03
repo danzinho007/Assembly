@@ -4,3 +4,12 @@ https://www.youtube.com/watch?v=0lfikxs967c&list=PLxTkH01AauxRm0LFLlOA9RR5O6hBLq
 Assembly na Prática - Especial 30 anos do Linux = OK
 O que aconteceu com os vídeos ? = OK
 Registradores = OK
+
+Assembly com SNES:
+https://www.youtube.com/watch?v=WoOVbPnpyjk&list=PLLFRf_pkM7b6Vi0ehPPovl1gQ5ubHTy5P
+
+Testando:
+https://www.programacaoprogressiva.net/p/curso-de-assembly.html
+
+Site que uso pra executar:
+https://www.mycompiler.io/pt/new/asm-x86_64
