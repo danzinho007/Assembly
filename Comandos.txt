@@ -1,0 +1,12 @@
+Comandos :
+
+add
+div
+else
+if
+mul
+rax
+rbx
+rcx
+rdx
+sub

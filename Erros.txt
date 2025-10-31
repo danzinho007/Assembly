@@ -11,7 +11,6 @@ Problema na definição de rótulo (label), acontece quando tenta definir o mesm
 -label alone on a line without a colon might be in error [-w+label-orphan]
 Cmpilador encontrou algo que parece ser um rótulo (label) em uma linha sozinho, mas sem o caracter : . Ele considera isso possivelmente um erro, porque no NASM rótulos devem terminar com um : .
 
-
 Exemplo :
 section .data
     meu_dado
